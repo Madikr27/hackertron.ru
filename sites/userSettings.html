@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/header.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/userSettings.css">
+    <title>Настройки</title>
+</head>
+<body>
+    <header>
+        <img src="<?= htmlspecialchars($imagePath) ?>" alt="аватар" class="imgAvatar">
+        <p class="text"><?= htmlspecialchars("$surname $name $patronymic") ?></p> 
+        <nav>
+            <ul>
+                <li><a class="textheader" href="userProfile.html">Профиль</a></li> 
+                <li><a class="textheader" href="logout.html">Выйти</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        
+        <?php if (isset($success)): ?>
+            <div class="success-message">
+                <?= htmlspecialchars($success) ?>
+            </div>
+        <?php endif; ?>
+        
+        <form method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file-input">Ваше фото</label>
+                <input id="file-input" type="file" name="image" accept="image/png, image/jpeg, image/gif">
+                <?php if ($imagePath !== 'img/defoltUser.png'): ?>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <label for="surname">Фамилия:</label>
+                <input type="text" id="surname" name="surname" value="" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" value="" required>
+            </div>
+            <div class="form-group">
+                <label for="patronymic">Отчество:</label>
+                <input type="text" id="patronymic" name="patronymic" value="">
+            </div>
+            <div class="form-group">
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" name="phone" value="" pattern="[0-9]{11}" maxlength="11" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="" required>
+            </div>
+            <div class="form-group">
+                <label for="dateOfBirth">Дата рождения:</label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth" value="" required>
+            </div>
+            <div class="form-group">
+                <label for="passportSeries">Серия паспорта:</label>
+                <input type="text" id="passportSeries" name="passportSeries" value="" required>
+            </div>
+            <div class="form-group">
+                <label for="passportNumbe">Номер паспорта:</label>
+                <input type="text" id="passportNumbe" name="passportNumbe" value="" required>
+            </div>
+            <div class="form-group">
+                <label for="policy">Полис:</label>
+                <input type="text" id="policy" name="policy" value="" required>
+            </div>
+            <div class="form-group">
+                <label for="login">Логин:</label>
+                <input type="text" id="login" name="login" value="" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Новый пароль (оставьте пустым, если не хотите менять):</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Повторите новый пароль:</label>
+                <input type="password" id="confirm-password" name="confirm-password">
+            </div>
+            <button type="submit" class="BtnRegister">Сохранить изменения</button>
+        </form>
+    </main>
+</body>
+</html>
