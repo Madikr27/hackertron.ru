@@ -1,0 +1,423 @@
+:root {
+  --primary: #333;
+  --primary-hover: #444;
+  --text-light: #fff;
+  --text-dark: #333;
+  --bg-light: #f9f9f9;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Базовые стили */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+}
+
+/* Шапка */
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--primary);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: var(--text-light);
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--text-light);
+  transition: var(--transition);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Герой-секция */
+.image-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fone-1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  animation: slideIn 0.5s forwards;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--text-light);
+  width: 90%;
+  max-width: 800px;
+}
+
+.overlay h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  line-height: 1.3;
+}
+
+/* Основная секция */
+/* Стили для секции записи */
+.sectionMain {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.zapis {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Контейнер сеансов */
+/* Стили для таблицы */
+.session-table {
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 0.8fr;
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+/* Стиль одной записи */
+.session-item {
+  display: grid;
+  grid-template-columns: 40% 20% 20% 20%; 
+  padding: 1rem;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
+
+
+.session-item:hover {
+  background: #f9f5ff;
+}
+
+/* Колонки */
+.col-fio, .col-time, .col-status {
+  padding: 0 0.5rem;
+}
+
+.col-select {
+  display: flex;
+  justify-content: center;
+}
+
+/* Радиокнопка */
+.session-radio {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+.table-body {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  width: 100%;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 0.8fr;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  transition: all 0.2s;
+}
+
+.table-row:hover {
+  background: #f9f5ff;
+}
+
+.cell {
+padding: 0.5rem 1rem;
+word-break: break-word;
+}
+/* Стили для статусов */
+.status-available { color: #27ae60; }
+.status-booked { color: #e74c3c; }
+.status-pending { color: #f39c12; }
+
+/* Стили для радиокнопок */
+.radio-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  user-select: none;
+}
+
+/* Скрываем дефолтную радиокнопку */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Кастомный круг */
+.radio-custom {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  margin-right: 12px;
+  transition: all 0.3s;
+}
+
+/* Точка внутри (при выборе) */
+.radio-custom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333;
+  transition: transform 0.3s;
+}
+
+/* Анимация при выборе */
+.radio-container input:checked ~ .radio-custom {
+  border-color: #6e48aa;
+  background: rgba(110, 72, 170, 0.1);
+}
+
+.radio-container input:checked ~ .radio-custom::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Стиль для текста */
+.radio-label {
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.3s;
+}
+
+/* Эффект при наведении */
+.radio-container:hover .radio-custom {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(110, 72, 170, 0.3);
+}
+
+.radio-container:hover .radio-label {
+  color: #6e48aa;
+}
+/* Кнопка подтверждения */
+.BtnConfirm {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.8rem 2rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.BtnConfirm:hover {
+  background: #4a2d7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.BtnConfirm:disabled {
+  background: #3333337d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+.session-item.selected {
+  background: #f0e6ff;
+  border-left: 3px solid #6e48aa;
+}
+label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Список сеансов */
+
+
+
+/* Кнопка */
+.BtnSession {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--text-light);
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.BtnSession:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Анимации */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+    .reviews-section {
+      padding: 40px 20px;
+      background-color: #f5f5f5;
+    }
+    .reviews-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .reviews-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+    .review-card {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #666;
+    }
+    .review-rating {
+      color: #FFA500;
+      font-weight: bold;
+    }
+    .review-content {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    #appointment-section {
+      scroll-margin-top: 100px; /* Отступ при прокрутке */
+    }
+/* Добавить в конец файла */
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .BtnSession {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .reviews-section {
+    padding: 20px 10px;
+  }
+
+  .review-card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    height: 70vh;
+  }
+
+  .overlay h1 {
+    font-size: 1.3rem;
+  }
+
+  .BtnSession {
+    padding: 0.8rem 1.5rem;
+  }
+}

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles/appointment.css" rel="stylesheet">
+  <link href="styles/header.css" rel="stylesheet">
+  <title>ПсихоМед - поможем вашему психологическому состоянию</title>
+</head>
+<body>
+
+    <header>
+        <img src="img/defoltUser.png" alt="Аватар" class="imgAvatar">
+        <p class="text"></p>
+        <nav>
+            <ul>
+                <li><a class="textheader" href="userProfile.html">Профиль</a></li>
+                <li><a class="textheader" href="logout.html">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+  <main>
+
+      
+      <section class="sectionMain">
+        <div class="zapis">
+          <label for="appointment-date">Выберите дату:</label>
+          <input type="date" id="session-date">
+        </div>
+        
+        <form action="appointment.html" method="POST">
+            <div class="session-table">
+                <!-- Заголовки колонок -->
+                <div class="table-header">
+                    <div class="cell">ФИО специалиста</div>
+                    <div class="cell">Время</div>
+                    <div class="cell">Статус</div>
+                    <div class="cell">Выбрать</div>
+                </div>
+                
+                <!-- Список сеансов  -->
+                <div id="session-list" class="table-body"></div>
+            </div>
+            
+            <button type="submit" class="BtnConfirm" disabled>Подтвердить запись</button>
+        </form>
+
+      </section>
+      
+  </main>
+  <script src="scripts/main.js" defer></script>
+
+</body>
+</html>

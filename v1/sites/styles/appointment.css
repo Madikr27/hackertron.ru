@@ -1,0 +1,185 @@
+:root {
+  --primary: #333;
+  --primary-hover: #444;
+  --text-light: #fff;
+  --text-dark: #333;
+  --bg-light: #f9f9f9;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+}
+
+.sectionMain {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.zapis {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.session-table {
+
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.session-item {
+display: grid;
+grid-template-columns: 3fr 1fr 1fr 0.5fr;
+padding: 1rem;
+align-items: center;
+border-bottom: 1px solid #eee;
+transition: background 0.2s;
+}
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 0.8fr;
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+.table-body {
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+.cell {
+  padding: 0.5rem 1rem;
+  word-break: break-word;
+}
+.status-available { 
+  color: #27ae60; 
+}
+.status-booked { 
+  color: #e74c3c; 
+}
+.status-pending { 
+  color: #f39c12; 
+}
+.radio-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  user-select: none;
+}
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.radio-custom {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  margin-right: 12px;
+  transition: all 0.3s;
+}
+.radio-custom::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333;
+  transition: transform 0.3s;
+}
+.radio-container input:checked ~ .radio-custom {
+  border-color: #6e48aa;
+  background: rgba(110, 72, 170, 0.1);
+}
+.radio-container input:checked ~ .radio-custom::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+.BtnConfirm {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.8rem 2rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.BtnConfirm:hover {
+  background: #4a2d7a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.BtnConfirm:disabled {
+  background: #3333337d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+input[type="date"] {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+/* Добавить в конец файла */
+@media (max-width: 768px) {
+  .sectionMain {
+    padding: 0 0.5rem;
+    margin: 1rem auto;
+  }
+
+  .session-table {
+    margin: 1rem 0;
+  }
+
+  .table-header,
+  .session-item {
+    grid-template-columns: 2fr 1fr 1fr 0.5fr;
+    font-size: 0.9rem;
+  }
+
+  .cell {
+    padding: 0.3rem;
+  }
+
+  input[type="date"] {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .BtnConfirm {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-header,
+  .session-item {
+    grid-template-columns: 1.5fr 1fr 1fr 0.5fr;
+  }
+
+  .cell {
+    font-size: 0.8rem;
+  }
+}

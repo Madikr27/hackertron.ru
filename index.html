@@ -3,181 +3,755 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HACKERTRON | Программирование для бизнеса | Разработка роботов и ИИ </title>
+    <title>Артём Щипицин | Программист</title>
+    <meta name="description" content="Backend-разработчик (PHP, MySQL). Создаю финансовые системы и веб-приложения.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <meta name="description" content="Артём Щипицин - разработчик ИИ и программист. Создаю умные решения, экспериментирую с нейросетями и мечтаю разработать собственного ИИ-ассистента. Фанат Евангелиона, киберпанка и современных технологий.">
-    <meta name="keywords" content="программирование, ИИ, искусственный интеллект, разработка, нейросети, Евангелион, киберпанк, Python, Java, JavaScript">
-    <meta property="og:title" content="HACKERTRON | Разработка ИИ и программирование">
-    <meta property="og:description" content="Сайт разработчика ИИ Артёма Щипицина. Создаю умные решения и экспериментирую с нейросетями.">
-    <meta property="og:image" content="https://hackertron.ru/H.png">
-    <link rel="icon" href="H.png" type="image/x-icon">
-    <!-- Yandex.RTB -->
-    <script>window.yaContextCb=window.yaContextCb||[]</script>
-    <script src="https://yandex.ru/ads/system/context.js" async></script>
+
 </head>
 <body>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(103116404, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/103116404" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- Шапка -->
     <header>
-        <div class="logo">
-            <span class="logo-accent">H</span>ACKERTRON
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">ARTEM</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+                
+                <nav>
+                    <a href="#projects" class="nav-link">Проекты</a>
+                    <a href="#skills" class="nav-link">Навыки</a>
+                    <a href="#about" class="nav-link">Опыт</a>
+                    <a href="#contact" class="nav-link accent">Контакты</a>
+                </nav>
+                
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
-        <nav>
-            <a href="#about">Обо мне</a>
-            <a href="#skills">Навыки</a>
-            <a href="#hobby">Увлечения</a>
-            <a href="#projects">Проекты</a>
-            <a href="#ai">ИИ</a>
-            <a href="#contact">Контакты</a>
-        </nav>
     </header>
 
-    <!-- Главный экран -->
+    <!-- Герой -->
     <section class="hero">
-        <div class="hero-text">
-            <h1>Привет, я Артём.</h1>
-            <p>Разрабатываю ИИ и мечтаю создать своего <span class="accent">"Джарвиса"</span>.</p>
-            <p><i>Пока что на коленке — но это начало.</i></p>
-            <button onclick="location.href='#projects'">Мои эксперименты</button>
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">Backend Developer</div>
+                
+                <h1 class="hero-title">
+                    <span class="hero-name">Артём Щипицин</span><br>
+                    <span class="hero-sub">Создаю backend для финансовых систем</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Специализируюсь на разработке безопасных и производительных веб-приложений на PHP и MySQL. 
+                    Учусь на 4 курсе по специальности "Информационные системы и программирование".
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-code"></i>
+                        Мои проекты
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-paper-plane"></i>
+                        Связаться
+                    </a>
+                    <a href="assets/resume.pdf" class="btn btn-secondary" download>
+                        <i class="fas fa-download"></i>
+                        Резюме
+                    </a>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">10 000+</div>
+                        <div class="stat-label">строк кода в OmegaBank</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">40+</div>
+                        <div class="stat-label">таблицы в БД проекта</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">лет программирования</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Блок с кодом -->
+            <div class="code-preview">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">OmegaBank.php</span>
+                    </div>
+                    <pre><code>class Transaction {
+    private $db;
+    
+    public function __construct() {
+        $this->db = new Database();
+    }
+    
+    public function process($from, $to, $amount) {
+        // Валидация данных
+        $this->validate($from, $to, $amount);
+        
+        // Начало транзакции
+        $this->db->beginTransaction();
+        
+        try {
+            // Списание
+            $this->withdraw($from, $amount);
+            // Зачисление
+            $this->deposit($to, $amount);
+            // Логирование
+            $this->logTransaction($from, $to, $amount);
+            
+            $this->db->commit();
+            return ['success' => true];
+        } catch (Exception $e) {
+            $this->db->rollback();
+            return ['error' => $e->getMessage()];
+        }
+    }
+}</code></pre>
+                </div>
+            </div>
         </div>
-        <div class="hero-image">
-            <img src="rei09.png" alt="Rei Ayanami" class="animated-image">
-        </div>
-    </section>
-<!-- Yandex.RTB -->
-<script>window.yaContextCb=window.yaContextCb||[]</script>
-<script src="https://yandex.ru/ads/system/context.js" async></script>
-    <!-- Обо мне -->
-    <section id="about" class="section">
-        <h2>Кто я?</h2>
-        <p>
-            Студент ПХТТ, специализация — <span class="accent">09.02.07 "Информационные системы и программирование"</span>.
-            Учусь создавать ИИ, автоматизировать процессы и экспериментирую с нейросетями.
-        </p>
     </section>
 
-    <!-- Увлечения -->
-    <section id="hobby" class="section">
-        <h2>Мои увлечения</h2>
-        <div class="hobby-content">
-            <div class="hobby-text">
-                <p>Помимо программирования, я увлекаюсь:</p>
-                <ul>
-                    <li>Аниме, особенно <span class="accent">"Евангелион"</span> - вдохновляюсь его философией и технологиями</li>
-                    <li>Киберпанк-культурой и эстетикой</li>
-                    <li>Разработкой концептов будущих ИИ-ассистентов</li>
-                    <li>Изучением нейроинтерфейсов и технологий будущего</li>
-                </ul>
-                <p>Моя мечта - создать ИИ, который объединит технологии "Евангелиона" и практичность современного ИИ.</p>
+    <!-- Основной проект -->
+    <section class="section featured" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ключевой проект</h2>
+                <p class="section-subtitle">Курсовая работа — интернет-банк</p>
             </div>
-            <div class="hobby-image">
-                <img src="rei.png" alt="Киберпанк и аниме" class="hobby-img" width="200">
+            
+            <div class="project-showcase">
+                <div class="project-image">
+                    <div class="image-frame">
+                        <!-- Реальный скриншот -->
+                        <img src="bank.png" alt="OmegaBank - Интернет банк" class="project-screenshot">
+                        <div class="image-overlay">
+                            <a href="https://Madikr27.github.io/omegabank.ru/" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Открыть демо проект
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-details">
+                    <h3 class="project-title">OmegaBank</h3>
+                    <div class="project-tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">HTML5/CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">AJAX</span>
+                        <span class="tag">FinTech</span>
+                    </div>
+                    
+                    <div class="project-description">
+                        <p>Полнофункциональный прототип интернет-банка, реализованный как курсовая работа.</p>
+                        
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Система аутентификации</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Переводы между счетами</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>История операций</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Административная панель</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>40+ таблиц в базе данных</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Безопасность (хеширование, валидация)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://Madikr27.github.io/omegabank.ru/" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Открыть демо проект
+                            </a>
+                            <a href="https://github.com/Madikr27/omegabank.ru" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Исходный код
+                            </a>
+                        </div>
+                        
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <div class="metric-number">10,000+</div>
+                                <div class="metric-label">строк кода</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">40+</div>
+                                <div class="metric-label">ERD-диаграмма</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-number">100%</div>
+                                <div class="metric-label">самостоятельно</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="psychomed">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Курсовой проект</h2>
+                <p class="section-subtitle">ПсихоМед — Личный кабинет психолога</p>
+            </div>
+            
+            <div class="project-showcase reverse">
+                <div class="project-details">
+                    <h3 class="project-title">ПсихоМед</h3>
+                    <div class="project-tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">HTML5/CSS3</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">AJAX</span>
+
+                    </div>
+                    
+                    <div class="project-description">
+                        <p>Личный кабинет психолога с полным циклом работы с клиентами — от записи до ведения сессий.</p>
+                        
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Регистрация и авторизация клиентов</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Система онлайн-записи на прием</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Календарь и управление расписанием</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Личные кабинеты (клиент/психолог)</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>История сессий и заметки</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Админ-панель управления</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="v1/sites/index.html" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Открыть проект
+                            </a>
+                            <a href="https://github.com/Madikr27" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Исходный код
+                            </a>
+                        </div>
+                        
+                        
+                        <div class="project-stats">
+                            <div class="stat">
+                                <div class="stat-number">3 000+</div>
+                                <div class="stat-label">строк кода</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">15</div>
+                                <div class="stat-label">таблиц в БД</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">7</div>
+                                <div class="stat-label">модулей системы</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-image">
+                    <div class="image-frame">
+                        <!-- Замени на реальный скриншот -->
+                        <img src="psychomed.png" alt="ПсихоМед - Личный кабинет психолога" class="project-screenshot">
+                        <div class="image-overlay">
+                            <a href="v1/sites/index.html" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Открыть демо проект
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Другие проекты -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Другие проекты</h2>
+                <p class="section-subtitle">Учебные и практические работы</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-header">
+                        <i class="fas fa-shopping-cart project-icon"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/Madikr27/My-Giro" class="project-link-icon" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="v1/gyroscooter-main/index.html" class="project-link-icon" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-card-title">My-Giro</h3>
+                    <p class="project-card-description">
+                        Интернет-магазин гироскутеров с адаптивным дизайном, фильтрацией товаров и корзиной.
+                    </p>
+                    <div class="project-card-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Адаптивная верстка</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="github-cta">
+                <p>Больше проектов на GitHub</p>
+                <a href="https://github.com/Madikr27" class="btn btn-outline" target="_blank">
+                    <i class="fab fa-github"></i>
+                    Madikr27
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Навыки -->
-    <section id="skills" class="section">
-        <h2>Мои навыки</h2>
-        <div class="skills-grid">
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Java</div>
-            <div class="skill">PHP</div>
-            <div class="skill">C</div>
-            <div class="skill">C#</div>
-            <div class="skill">C++</div>
-            <div class="skill">SQL</div>
-            <div class="skill">1C</div>
-            <div class="skill">Python</div>
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Технические навыки</h2>
+                <p class="section-subtitle">Основной стек и технологии</p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-server"></i>
+                        Backend
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">PHP 8+</span>
+                            <div class="skill-level">
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-level">
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-level">
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot"></div>
+                                <div class="level-dot"></div>
+                            </div>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">REST API</span>
+                            <div class="skill-level">
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot"></div>
+                                <div class="level-dot"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-code"></i>
+                        Frontend
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-level">
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                            </div>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-level">
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Bootstrap</span>
+                            <div class="skill-level">
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot"></div>
+                            </div>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-tools"></i>
+                        Инструменты
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Git / GitHub</span>
+                            <div class="skill-level">
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-level">
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot"></div>
+                                <div class="level-dot"></div>
+                            </div>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-level">
+                                <div class="level-dot active"></div>
+                                <div class="level-dot active"></div>
+                                <div class="level-dot"></div>
+                                <div class="level-dot"></div>
+                                <div class="level-dot"></div>
+                            </div>
+                            <span class="skill-percent">40%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="additional-skills">
+                <h3>Также изучал/экспериментировал:</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Unity</span>
+                    <span class="skill-tag">Arduino</span>
+                    <span class="skill-tag">ESP32</span>
+                    <span class="skill-tag">1C</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Linux</span>
+                </div>
+            </div>
         </div>
-<!-- Yandex.RTB R-A-17506778-2 -->
-<div id="yandex_rtb_R-A-17506778-2"></div>
-<script>
-window.yaContextCb.push(() => {
-    Ya.Context.AdvManager.render({
-        "blockId": "R-A-17506778-2",
-        "renderTo": "yandex_rtb_R-A-17506778-2",
-        "type": "feed"
-    })
-})
-</script>
     </section>
 
-    <!-- Проекты -->
-    <section id="projects" class="section">
-        <h2>Мои проекты</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>vksimllerbot</h3>
-                <p>Простой накрутчик комментариев под посты во ВКонтакте.</p>
-                <a href="https://github.com/Madikr27/vksimllerbot" class="btn">GitHub</a>
+    <!-- Опыт и образование -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Эволюция разработчика</h2>
+                <p class="section-subtitle">От HTML к системной архитектуре</p>
             </div>
-            <div class="project-card">
-                <h3>My-Giro</h3>
-                <p>Тестовый проект для интернет магазина</p>
-                <a href="gyroscooter-main/index.html" class="btn">Подробнее</a>
+            
+            <div class="timeline">
+                <!-- 2025 - Бизнес-процессы -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2025 — настоящее время</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Бизнес-ориентированная разработка</h3>
+                        <ul class="timeline-list">
+                            <li>Разработка <strong>Telegram-ботов</strong> для автоматизации бизнес-процессов</li>
+                            <li>Создание <strong>landing pages</strong> с фокусом на конверсию</li>
+                            <li>Разработка <strong>веб-игр</strong> на HTML5 с WebSocket</li>
+                            <li>Проектирование <strong>игр на Unity</strong></li>
+                            <li>Архитектура <strong>финтех-решений</strong> (OmegaBank)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 2024 - Углубление -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Углубление в стек технологий</h3>
+                        <ul class="timeline-list">
+                            <li>Повторное изучение <strong>HTML/CSS/JavaScript</strong> на продвинутом уровне</li>
+                            <li>Освоение <strong>C#</strong> для backend-разработки</li>
+                            <li>Изучение <strong>C</strong> для понимания низкоуровневых процессов</li>
+                            <li>Работа с <strong>PHP</strong> для веб-разработки</li>
+                            <li>Интеграция технологий в коммерческие проекты</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 2023 - Аппаратный уровень -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Фриланс-разработчик & Аппаратное программирование</h3>
+                        <p class="timeline-subtitle">Параллельно с обучением в ПХТТ</p>
+                        <ul class="timeline-list">
+                            <li>Разработка адаптивных <strong>landing pages</strong></li>
+                            <li>Создание интерфейсов на <strong>React</strong></li>
+                            <li>Изучение <strong>C++</strong> для проектов на <strong>Arduino</strong></li>
+                            <li>Интеграция с внешними <strong>API</strong></li>
+                            <li>Оптимизация производительности веб-приложений</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 2022 - Системное мышление -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Системное администрирование & Python</h3>
+                        <ul class="timeline-list">
+                            <li>Глубокое изучение <strong>Linux</strong> и его инструментов</li>
+                            <li>Изучение архитектуры ОС <strong>Linux и Windows</strong></li>
+                            <li>Продвинутое программирование на <strong>Python</strong></li>
+                            <li>Понимание системных процессов и оптимизации</li>
+                            <li>Начало обучения в <strong>ПХТТ</strong> по специальности "Информационные системы"</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 2020-2021 - Основы логики -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2020 — 2021</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Освоение логики программирования</h3>
+                        <ul class="timeline-list">
+                            <li>Изучение <strong>Python</strong> для понимания структур данных и алгоритмов</li>
+                            <li>Освоение основ <strong>объектно-ориентированного программирования</strong></li>
+                            <li>Создание первых скриптов и автоматизаций</li>
+                            <li>Понимание принципов <strong>чистого кода</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 2019 - Начало -->
+                <div class="timeline-item">
+                    <div class="timeline-date">2019</div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Начало пути</h3>
+                        <ul class="timeline-list">
+                            <li>Изучение основ <strong>HTML</strong> — структура веб-страниц</li>
+                            <li>Освоение <strong>CSS</strong> — стилизация и визуальное представление</li>
+                            <li>Создание первых <strong>статических сайтов</strong></li>
+                            <li>Понимание основ <strong>веб-разработки</strong></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <h3>ПсихоМед</h3>
-                <p>Тестовый проект для личного кабинета психолога</p>
-                <a href="sites/index.html" class="btn">Подробнее</a>
+            
+            <div class="learning-path-summary">
+                <div class="summary-card">
+                    <i class="fas fa-layer-group summary-icon"></i>
+                    <div>
+                        <h3>Многослойный подход к обучению</h3>
+                        <p>Путь от фронтенда к системной архитектуре: <strong>Вёрстка → Логика → Системы → Железо → Бизнес</strong></p>
+                        <p>Каждый год — новый слой абстракции, что позволяет видеть проекты целиком и принимать архитектурные решения на всех уровнях.</p>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <h3>Будущий "Джарвис"</h3>
-                <p>Мечтаю создать голосового ассистента.</p>
-                <a href="#ai" class="btn">Идеи</a>
+            
+            <div class="education-details">
+                <div class="education-card">
+                    <i class="fas fa-graduation-cap education-icon"></i>
+                    <div>
+                        <h3>Пермский химико-технологический техникум</h3>
+                        <p><strong>Специальность:</strong> 09.02.07 "Информационные системы и программирование"</p>
+                        <p><strong>Статус:</strong> студент 4 курса, группа ИС-22-2</p>
+                        <p><strong>Ключевые достижения:</strong> Курсовой проект "OmegaBank" (интернет-банк), проектирование БД (43 таблицы), изучение полного цикла разработки ПО</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="current-focus">
+                <h3 class="focus-title">Сейчас в фокусе</h3>
+                <div class="focus-tags">
+                    <span class="focus-tag">Архитектура децентрализованных систем</span>
+                    <span class="focus-tag">Финтех-разработка</span>
+                    <span class="focus-tag">Международные IT-партнёрства</span>
+                    <span class="focus-tag">Создание музыкальных платформ</span>
+                    <span class="focus-tag">Разработка игровых механик</span>
+                </div>
             </div>
         </div>
-    </section>
-
-    <!-- ИИ -->
-    <section id="ai" class="section">
-        <h2>Мои эксперименты с ИИ</h2>
-        <p>
-            Планирую собрать систему, которая сможет:
-        </p>
-        <ul>
-            <li>Отвечать на голосовые команды (как Джарвис).</li>
-            <li>Автоматизировать рутинные задачи.</li>
-            <li>Управлять умным домом.</li>
-        </ul>
     </section>
 
     <!-- Контакты -->
-    <section id="contact" class="section">
-        <h2>Свяжись со мной</h2>
-        <div class="contacts">
-            <a href="https://t.me/VLADIMIER_PUTIN" class="contact-link"><i class="fab fa-telegram"></i> Telegram</a>
-            <a href="https://github.com/Madikr27" class="contact-link"><i class="fab fa-github"></i> GitHub</a>
-            <a href="mailto:KGB-RUSSIAN@yandex.ru" class="contact-link"><i class="fas fa-envelope"></i> Email</a>
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Контакты</h2>
+                <p class="section-subtitle">Всегда открыт для предложений</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>
+                            <h3>Локация</h3>
+                            <p>Пермь, Россия</p>
+                            <p class="contact-note">Готов к удаленной работе</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:shchipitsin2006bk.ru@gmail.com">shchipitsin2006bk.ru@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-telegram contact-icon"></i>
+                        <div>
+                            <h3>Telegram</h3>
+                            <a href="https://t.me/russhadowred">@russhadowred</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-github contact-icon"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/Madikr27">github.com/Madikr27</a>
+                            <p class="contact-note">Основные проекты</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Быстрое сообщение</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Сообщение..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Отправить сообщение
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Футер -->
     <footer>
-        <p>© 2024 HACKERTRON. Все права защищены.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span>ARTEM_SHCHIPITSIN</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#projects" class="footer-link">Проекты</a>
+                    <a href="#skills" class="footer-link">Навыки</a>
+                    <a href="#about" class="footer-link">Опыт</a>
+                    <a href="#contact" class="footer-link">Контакты</a>
+                </div>
+            
+                
+                <div class="footer-copyright">
+                    <p>© <span id="currentYear">2025</span> Артём Щипицин. Студент-разработчик.</p>
+                    <p class="footer-note">Сайт обновляется по мере завершения новых проектов</p>
+                    <a class="footer-note" href="v1/index.html">Перейти на старую версию</a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
-
-

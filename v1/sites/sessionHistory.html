@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/sessionHistory.css">
+    <link href="styles/header.css" rel="stylesheet">
+    <title>История сеансов</title>
+</head>
+<body>
+    <header>
+        <img src="img/defoltUser.png" alt="аватар" class="imgAvatar">
+        <p class="text"><?= htmlspecialchars("$surname $name $patronymic") ?></p> 
+        <nav>
+            <ul>
+                <li><a class="textheader" href="userProfile.html">Профиль</a></li> 
+                <li><a class="textheader" href="logout.html">Выйти</a></li> 
+            </ul>
+        </nav>
+    </header>
+<main>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="img/psiholog.jpg" alt="Фотография психолога">
+            <p>Патрушев Иван Нотаныч</p>
+            <p>Дата: 23.03.2025</p>
+            <p>Время: 13:00</p>
+            <p>Статус: Идет сеанс</p>
+            <p>Заметки: Будьте спокойны следующий раз</p>
+            
+            <form action="sessionHistory.html" method="post">
+                <input type="hidden" name="pay_session_id" value="123">
+                <button type="submit" class="pay-button">Оплатить картой</button>
+            </form>
+        </div>
+
+        <div class="grid-item">
+            <img src="img/psiholog.jpg" alt="Фотография психолога">
+            <p>Патрушев Иван Нотаныч</p>
+            <p>Дата: 25.03.2025</p>
+            <p>Время: 15:30</p>
+            <p>Статус: Занято</p>
+            <p>Заметки: Подготовьте вопросы заранее</p>
+            
+            <form action="sessionHistory.html" method="post">
+                <input type="hidden" name="session_id" value="124">
+                <button class="cancel-button">Отменить</button>
+            </form>
+        </div>
+
+        <div class="grid-item">
+            <img src="img/psiholog.jpg" alt="Фотография психолога">
+            <p>Патрушев Иван Нотаныч</p>
+            <p>Дата: 28.03.2025</p>
+            <p>Время: 11:00</p>
+            <p>Статус: Завершен</p>
+            <p>Заметки: Спасибо за сеанс</p>
+        </div>
+    </div>
+</main>
+    
+</body>
+</html>

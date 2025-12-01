@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/userProfile.css">
+    <link href="styles/header.css" rel="stylesheet">
+    <link href="styles/feedback.css" rel="stylesheet">
+    <title>Профиль пользователя</title>
+</head>
+<body>
+    <header>
+        <img src="img/defoltUser.png" alt="Аватар" class="imgAvatar">
+        <p class="text"></p>
+        <nav>
+            <ul>
+                <li><a class="textheader" href="userProfile.html">Профиль</a></li>
+                <li><a class="textheader" href="logout.html">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <main>
+            <div class="profile">
+                <img src="img/psiholog.jpg" alt="Психолог" class="profile-img">
+                <div>
+                    <h2>Патрушев Иван Нотаныч</h2>
+                    <p>Кандидат психологических наук, опыт работы 15 лет</p>
+                </div>
+            </div>
+            
+            <!-- Пример сообщения об успехе -->
+            <div class="message success">Ваш отзыв успешно отправлен!</div>
+            
+            
+            <div class="rating">
+                <h3>Оцените психолога:</h3>
+                <form action="" method="post">
+                    <input type="radio" id="star1" name="rating" value="1"/>
+                    <label for="star1" title="1 звезда">&#9733;</label>
+                    <input type="radio" id="star2" name="rating" value="2"/>
+                    <label for="star2" title="2 звезды">&#9733;</label>
+                    <input type="radio" id="star3" name="rating" value="3"/>
+                    <label for="star3" title="3 звезды">&#9733;</label>
+                    <input type="radio" id="star4" name="rating" value="4"/>
+                    <label for="star4" title="4 звезды">&#9733;</label>
+                    <input type="radio" id="star5" name="rating" value="5"/>
+                    <label for="star5" title="5 звезд">&#9733;</label>
+                    <h3>Оставьте отзыв:</h3>
+                    <textarea rows="5" placeholder="Ваш отзыв здесь..." name="comment"></textarea>
+                    <button type="submit">Отправить отзыв</button>
+                </form>
+            </div>
+            
+            <!-- Список существующих отзывов -->
+            <div class="review-list">
+                <h3>Ваши отзывы:</h3>
+                
+                <!-- Пример отзыва 1 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-date">
+                            15.05.2023
+                        </div>
+                        <div class="review-rating">
+                            ★★★★★
+                        </div>
+                    </div>
+                    <div class="review-comment">
+                        Очень профессиональный подход. После нескольких сеансов почувствовала значительное улучшение состояния. Рекомендую!
+                    </div>
+                    <button class="delete-review" 
+                            onclick="if(confirm('Удалить этот отзыв?')) { 
+                                window.location.href='feedback.php?delete_review=1'
+                            }">
+                        ×
+                    </button>
+                </div>
+                
+                <!-- Пример отзыва 2 -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-date">
+                            22.06.2023
+                        </div>
+                        <div class="review-rating">
+                            ★★★★☆
+                        </div>
+                    </div>
+                    <div class="review-comment">
+                        Хороший специалист, но иногда не хватало более индивидуального подхода.
+                    </div>
+                    <button class="delete-review" 
+                            onclick="if(confirm('Удалить этот отзыв?')) { 
+                                window.location.href='feedback.php?delete_review=2'
+                            }">
+                        ×
+                    </button>
+                </div>
+                
+                <!-- Сообщение если нет отзывов -->
+                <!-- <p class="no-reviews">У вас пока нет отзывов</p> -->
+            </div>
+        </main>
+    </div>
+</body>
+</html>
