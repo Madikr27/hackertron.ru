@@ -156,41 +156,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // 9. Анимация статистики в герое
-    const statNumbers = document.querySelectorAll('.stat-number');
-    
-    const statObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const element = entry.target;
-                const finalValue = element.textContent;
-                
-                // Если значение содержит +, просто показываем его
-                if (finalValue.includes('+')) {
-                    return;
-                }
-                
-                // Анимация счетчика для числовых значений
-                let startValue = 0;
-                const endValue = parseInt(finalValue);
-                const duration = 1500;
-                const increment = endValue / (duration / 16);
-                
-                const timer = setInterval(() => {
-                    startValue += increment;
-                    if (startValue >= endValue) {
-                        element.textContent = endValue + (finalValue.includes('+') ? '+' : '');
-                        clearInterval(timer);
-                    } else {
-                        element.textContent = Math.floor(startValue);
-                    }
-                }, 16);
-                
-                statObserver.unobserve(element);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    statNumbers.forEach(stat => statObserver.observe(stat));
 });
