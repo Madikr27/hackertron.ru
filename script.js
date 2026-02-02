@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const currentTheme = localStorage.getItem('theme');
     
-    // Устанавливаем сохраненную тему
+    // Устанавливаем сохраненную тем 
     if (currentTheme === 'dark') {
         document.body.classList.add('dark-theme');
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
