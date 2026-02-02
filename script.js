@@ -1,4 +1,4 @@
-// Основной скрипт сайта
+// Основной скрипт сайта 
 document.addEventListener('DOMContentLoaded', function() {
     // 1. Переключение темы
     const themeToggle = document.getElementById('themeToggle');
